@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#008a50">
+  <title>LedgerCo — Track your spending</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="welcome">
+    <span class="welcome-mark" aria-hidden="true">L</span>
+    <h1>Welcome to LedgerCo</h1>
+    <p>Your money, safe and your spending, easy to track.</p>
+  </header>
+
+
+  <!--Login-->
+  <h2>Welcome back!</h2>
+  <p class="section-copy">Log in to pick up where you left off.</p>
+  <form id="login">
+    <label for="login-name">Your name</label>
+    <input id="login-name" class="text" name="name" type="text" placeholder="e.g. Amina" autocomplete="name" required>
+    <label for="login-email">Email address</label>
+    <input id="login-email" class="text" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+    <label for="login-password">Password</label>
+    <input id="login-password" class="text" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+    <button type="submit">Log in <span aria-hidden="true">→</span></button>
+  </form>
+
+  <section class="social-auth" aria-label="Other sign-in options">
+    <p>Or continue with</p>
+    <div class="social-auth-buttons">
+      <button class="social-button" type="button" id="google-login">
+        <svg class="provider-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.73 7.18l7.65 5.93c4.47-4.13 7.12-10.22 7.12-17.58Z"/>
+          <path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.88.93 7.55 2.56 10.78l7.97-6.19Z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.87-5.87l-7.65-5.93c-2.13 1.43-4.86 2.28-8.22 2.28-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/>
+        </svg>
+        <span>Google</span>
+      </button>
+      <button class="social-button" type="button" id="apple-login">
+        <svg class="provider-icon apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M16.37 12.18c.02 2.15 1.89 2.87 1.91 2.88-.02.05-.3 1.04-.99 2.06-.6.89-1.22 1.78-2.2 1.8-.96.02-1.27-.58-2.37-.58-1.1 0-1.44.56-2.35.6-.94.04-1.65-.96-2.26-1.85-1.24-1.8-2.19-5.09-.92-7.31a3.49 3.49 0 0 1 2.94-1.79c.92-.02 1.79.62 2.36.62.56 0 1.62-.77 2.73-.66.47.02 1.8.19 2.66 1.44-.07.04-1.59.93-1.57 2.79ZM14.58 6.76a3.45 3.45 0 0 0 .79-2.48 3.5 3.5 0 0 0-2.27 1.19 3.27 3.27 0 0 0-.81 2.4 2.9 2.9 0 0 0 2.29-1.11Z"/>
+        </svg>
+        <span>Apple</span>
+      </button>
+    </div>
+  </section>
+
+  <!--Register-section-->
+  <h3>New to LedgerCo?</h3>
+  <p class="section-copy">Create an account to get started.</p>
+  <form id="register">
+    <label for="first-name">First name</label>
+    <input id="first-name" name="firstName" type="text" placeholder="First name" autocomplete="given-name" required>
+    <label for="second-name">Second name</label>
+    <input id="second-name" name="secondName" type="text" placeholder="Second name" autocomplete="additional-name" required>
+    <label for="surname">Surname</label>
+    <input id="surname" name="surname" type="text" placeholder="Surname" autocomplete="family-name" required>
+    <label for="register-email">Email address</label>
+    <input id="register-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+    <label for="register-password">Create password</label>
+    <input id="register-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+    <label for="confirm-password">Confirm password</label>
+    <input id="confirm-password" name="confirmPassword" type="password" placeholder="Enter your password again" autocomplete="new-password" minlength="8" required>
+    <button type="submit">Create account <span aria-hidden="true">✦</span></button>
+  </form>
+
+  <!-- Main section -->
+  <main id="main-section" class="expense-app" aria-labelledby="dashboard-title">
+    <header class="dashboard-heading">
+      <div>
+        <p class="eyebrow">YOUR MONEY AT A GLANCE</p>
+        <h2 id="dashboard-title">Expense tracker</h2>
+        <p class="section-copy">Keep track of what you spend, wherever you spend it.</p>
+      </div>
+      <label class="home-currency-control" for="home-currency">
+        Home currency
+        <select id="home-currency" name="homeCurrency">
+          <option value="KES" selected>KES — Kenyan Shilling</option>
+          <option value="USD">USD — US Dollar</option>
+          <option value="EUR">EUR — Euro</option>
+          <option value="GBP">GBP — British Pound</option>
+          <option value="TZS">TZS — Tanzanian Shilling</option>
+          <option value="UGX">UGX — Ugandan Shilling</option>
+          <option value="ZAR">ZAR — South African Rand</option>
+          <option value="NGN">NGN — Nigerian Naira</option>
+          <option value="CAD">CAD — Canadian Dollar</option>
+          <option value="AUD">AUD — Australian Dollar</option>
+          <option value="INR">INR — Indian Rupee</option>
+          <option value="JPY">JPY — Japanese Yen</option>
+        </select>
+      </label>
+    </header>
+
+    <section class="total-card" aria-labelledby="total-title">
+      <div>
+        <p id="total-title" class="total-label">Total expenses</p>
+        <output id="expense-total" class="total-amount" aria-live="polite">KES 0.00</output>
+      </div>
+      <span class="total-icon" aria-hidden="true">↗</span>
+      <p class="total-note">Converted to your home currency</p>
+    </section>
+
+    <section class="tracker-panel" aria-labelledby="add-expense-title">
+      <div class="panel-heading">
+        <div>
+          <h3 id="add-expense-title">Add an expense</h3>
+          <p class="panel-copy">Record a purchase in the currency you paid.</p>
+        </div>
+      </div>
+      <form id="spendings" class="expense-form">
+        <label for="spending-description">Description</label>
+        <input id="spending-description" name="description" type="text" placeholder="e.g. Lunch with a friend" required>
+
+        <label for="spending-amount">Amount</label>
+        <input id="spending-amount" name="amount" type="number" min="0.01" step="0.01" placeholder="e.g. 1.50" required>
+
+        <label for="spending-currency">Currency paid in</label>
+        <select id="spending-currency" name="currency" required>
+          <option value="KES" selected>KES — Kenyan Shilling</option>
+          <option value="USD">USD — US Dollar</option>
+          <option value="EUR">EUR — Euro</option>
+          <option value="GBP">GBP — British Pound</option>
+          <option value="TZS">TZS — Tanzanian Shilling</option>
+          <option value="UGX">UGX — Ugandan Shilling</option>
+          <option value="ZAR">ZAR — South African Rand</option>
+          <option value="NGN">NGN — Nigerian Naira</option>
+          <option value="CAD">CAD — Canadian Dollar</option>
+          <option value="AUD">AUD — Australian Dollar</option>
+          <option value="INR">INR — Indian Rupee</option>
+          <option value="JPY">JPY — Japanese Yen</option>
+        </select>
+<!--Category Spendings-->
+        <label for="spending-category">Category</label>
+        <select id="spending-category" name="category" required>
+          <option value="" selected disabled>Choose a category</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Health">Health</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Add expense <span aria-hidden="true">+</span></button>
+      </form>
+    </section>
+
+    <section class="tracker-panel expense-history" aria-labelledby="expense-history-title">
+      <div class="panel-heading">
+        <div>
+          <h3 id="expense-history-title">Recent expenses</h3>
+          <p class="panel-copy">Your purchases and their home-currency values.</p>
+        </div>
+        <label class="category-filter" for="category-filter">
+          <span>Category</span>
+          <select id="category-filter" name="categoryFilter">
+            <option value="all">All categories</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Health">Health</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <p id="expense-empty-state" class="empty-state">No expenses yet. Add your first expense above to get started.</p>
+      <ul id="expense-list" class="expense-list" aria-live="polite"></ul>
+
+      <template id="expense-item-template">
+        <li class="expense-item">
+          <div class="expense-details">
+            <span class="expense-description" data-expense-description></span>
+            <span class="category-badge" data-expense-category></span>
+          </div>
+          <div class="expense-values">
+            <span class="original-amount" data-expense-original></span>
+            <span class="converted-amount" data-expense-converted></span>
+          </div>
+          <button class="delete-expense" type="button" aria-label="Delete expense">×</button>
+        </li>
+      </template>
+    </section>
+  </main>
+</body>
+</html>
