@@ -61,6 +61,60 @@ h3 {
   line-height: 1.5;
 }
 
+.welcome-mark[href] {
+  text-decoration: none;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.auth-links a,
+.auth-switch a {
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.auth-links a {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.auth-links a:hover,
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  justify-content: flex-start;
+}
+
+.auth-page .welcome {
+  margin-bottom: 20px;
+}
+
+.auth-section {
+  width: min(100%, 440px);
+}
+
+.auth-section form {
+  width: 100%;
+}
+
+.auth-switch {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
 body > h2,
 body > h3,
 body > .section-copy {

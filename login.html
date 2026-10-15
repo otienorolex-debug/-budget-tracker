@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#008a50">
+  <title>Log in — LedgerCo</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="auth-page">
+  <header class="welcome">
+    <a class="welcome-mark" href="./index.html" aria-label="LedgerCo home">L</a>
+    <h1>Welcome back!</h1>
+    <p>Log in to pick up where you left off.</p>
+  </header>
+
+  <main class="auth-section">
+    <form id="login">
+      <label for="login-name">Your name</label>
+      <input id="login-name" name="name" type="text" placeholder="e.g. Amina" autocomplete="name" required>
+      <label for="login-email">Email address</label>
+      <input id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <label for="login-password">Password</label>
+      <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+      <button type="submit">Log in <span aria-hidden="true">→</span></button>
+    </form>
+
+    <section class="social-auth" aria-label="Other sign-in options">
+      <p>Or continue with</p>
+      <div class="social-auth-buttons">
+        <button class="social-button" type="button" id="google-login">
+          <svg class="provider-icon" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.73 7.18l7.65 5.93c4.47-4.13 7.12-10.22 7.12-17.58Z"/>
+            <path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.88.93 7.55 2.56 10.78l7.97-6.19Z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.87-5.87l-7.65-5.93c-2.13 1.43-4.86 2.28-8.22 2.28-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/>
+          </svg>
+          <span>Google</span>
+        </button>
+        <button class="social-button" type="button" id="apple-login">
+          <svg class="provider-icon apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16.37 12.18c.02 2.15 1.89 2.87 1.91 2.88-.02.05-.3 1.04-.99 2.06-.6.89-1.22 1.78-2.2 1.8-.96.02-1.27-.58-2.37-.58-1.1 0-1.44.56-2.35.6-.94.04-1.65-.96-2.26-1.85-1.24-1.8-2.19-5.09-.92-7.31a3.49 3.49 0 0 1 2.94-1.79c.92-.02 1.79.62 2.36.62.56 0 1.62-.77 2.73-.66.47.02 1.8.19 2.66 1.44-.07.04-1.59.93-1.57 2.79ZM14.58 6.76a3.45 3.45 0 0 0 .79-2.48 3.5 3.5 0 0 0-2.27 1.19 3.27 3.27 0 0 0-.81 2.4 2.9 2.9 0 0 0 2.29-1.11Z"/>
+          </svg>
+          <span>Apple</span>
+        </button>
+      </div>
+    </section>
+
+    <p class="auth-switch">New to LedgerCo? <a href="./register.html">Create an account</a></p>
+  </main>
+</body>
+</html>

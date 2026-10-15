@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#008a50">
+  <title>Create an account — LedgerCo</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="auth-page">
+  <header class="welcome">
+    <a class="welcome-mark" href="./index.html" aria-label="LedgerCo home">L</a>
+    <h1>Create your account</h1>
+    <p>Get started with a clearer view of your spending.</p>
+  </header>
+
+  <main class="auth-section">
+    <form id="register">
+      <label for="first-name">First name</label>
+      <input id="first-name" name="firstName" type="text" placeholder="First name" autocomplete="given-name" required>
+      <label for="second-name">Second name</label>
+      <input id="second-name" name="secondName" type="text" placeholder="Second name" autocomplete="additional-name" required>
+      <label for="surname">Surname</label>
+      <input id="surname" name="surname" type="text" placeholder="Surname" autocomplete="family-name" required>
+      <label for="register-email">Email address</label>
+      <input id="register-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <label for="register-password">Create password</label>
+      <input id="register-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+      <label for="confirm-password">Confirm password</label>
+      <input id="confirm-password" name="confirmPassword" type="password" placeholder="Enter your password again" autocomplete="new-password" minlength="8" required>
+      <button type="submit">Create account <span aria-hidden="true"></span></button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="./login.html">Log in</a></p>
+  </main>
+</body>
+</html>

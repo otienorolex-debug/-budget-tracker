@@ -1,0 +1,23 @@
+{
+  "name": "-budget-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otienorolex-debug/-budget-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otienorolex-debug/-budget-tracker/issues"
+  },
+  "homepage": "https://github.com/otienorolex-debug/-budget-tracker#readme",
+  "devDependencies": {
+    "vitest": "^5.0.5"
+  }
+}
